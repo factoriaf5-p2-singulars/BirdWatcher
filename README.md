@@ -67,6 +67,11 @@ foreach (char vowel in vowels)
 // => aeiou
 ```
 
+## Running the tests
+If you use Rider or Visual Studio, you can run the tests by opening the solution file and right clicking on the test file and selecting "Run" or "Run Unit Tests".
+
+If you use visual studio code you must run the command `dotnet test` from the exercise directory.
+
 ## Instructions
 
 You're an avid bird watcher that keeps track of how many birds have visited your garden in the last seven days.
