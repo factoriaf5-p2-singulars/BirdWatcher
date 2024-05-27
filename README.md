@@ -1,8 +1,7 @@
 # Bird Watcher
 
-Welcome to Bird Watcher on Exercism's C# Track.
-If you need help running the tests or submitting your code, check out `HELP.md`.
-If you get stuck on the exercise, check out `HINTS.md`, but try and solve it without using those first :)
+Welcome to Bird Watcher.
+If you get stuck on the exercise, check it out at the bottom of each instruction in the helps section, but try and solve it without using those first :)
 
 ## Introduction
 
@@ -82,6 +81,12 @@ For comparison purposes, you always keep a copy of last week's counts nearby, wh
 BirdCount.LastWeek();
 // => [0, 2, 5, 3, 7, 8, 4]
 ```
+<details>
+  <summary>Helps</summary>
+  <ul>
+<li>As this method does _not_ depend on the current week's count, it is defined as a  <a href="https://www.oreilly.com/library/view/programming-c/0596001177/ch04s03.html">`static` method</a>.</li>  
+<li> There are <a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/arrays#single-dimensional-arrays">several ways to define an array</a></li></ul>
+</details>
 
 ## 2. Check how many birds visited today
 
@@ -93,6 +98,12 @@ var birdCount = new BirdCount(birdsPerDay);
 birdCount.Today();
 // => 1
 ```
+<details>
+  <summary>Helps</summary>
+  <ul>
+<li>Remember that the counts are ordered by day from oldest to most recent, with the last element representing today.</li>  
+<li>Accessing the last element can be done either by using its (fixed) index (remember to start counting from zero) or by calculating its index using the <a href="https://learn.microsoft.com/en-us/dotnet/api/system.array.length?view=net-8.0">array's size</a>/li></ul>
+</details>
 
 ## 3. Increment today's count
 
@@ -105,6 +116,13 @@ birdCount.IncrementTodaysCount();
 birdCount.Today();
 // => 2
 ```
+<details>
+  <summary>Helps</summary>
+  <ul>
+<li>Remember that the counts are ordered by day from oldest to most recent, with the last element representing today.</li>  
+<li>You can use the <a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/proposals/csharp-8.0/ranges#systemindex">Range</a>  to solve this exercise./li></ul>
+</details>
+
 
 ## 4. Check if there was a day with no visiting birds
 
@@ -116,6 +134,18 @@ var birdCount = new BirdCount(birdsPerDay);
 birdCount.HasDayWithoutBirds();
 // => true
 ```
+<details>
+  <summary>Helps</summary>
+  <ul> 
+<li>If you have done it with ^ you only have to add after the array/li></ul>
+</details>
+
+<details>
+  <summary>Helps Refactor</summary>
+  <ul>
+<li>You can use <a href="https://learn.microsoft.com/es-es/dotnet/api/system.array.indexof?view=net-8.0">Array.IndexOf</a>.</li>  
+</ul>
+</details>
 
 ## 5. Calculate the number of visiting birds for the first number of days
 
@@ -128,6 +158,23 @@ birdCount.CountForFirstDays(4);
 // => 14
 ```
 
+<details>
+  <summary>Helps</summary>
+  <ul> 
+<li>A variable can be used to hold the count for the number of visiting birds.</li>
+<li>The array can be iterated over using a <a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/statements/iteration-statements">for loop </a></li>
+<li>The variable can be updated inside the loop.</li>
+<li>Remember: arrays are indexed from `0`.</li>
+</ul>
+</details>
+
+<details>
+  <summary>Helps Refactor</summary>
+  <ul>
+<li>You can use <a href="https://learn.microsoft.com/es-es/dotnet/api/system.math.min?view=net-8.0">Math.Min</a> and <a href="https://learn.microsoft.com/es-es/dotnet/api/system.linq.enumerable.sum?view=net-8.0">Sum</a></li>  
+</ul>
+</details>
+
 ## 6. Calculate the number of busy days
 
 Some days are busier that others. A busy day is one where five or more birds have visited your garden.
@@ -139,6 +186,29 @@ var birdCount = new BirdCount(birdsPerDay);
 birdCount.BusyDays();
 // => 2
 ```
+
+<details>
+  <summary>Helps</summary>
+  <ul> 
+<li>A variable can be used to hold the number of busy days.</li>
+<li>The array can be iterated over using a <a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/statements/iteration-statements">for loop </a></li>
+<li>The variable can be updated inside the loop.</li>
+<li>A <a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/statements/selection-statements">conditional statement</a> can be used inside the loop.</li>
+</ul>
+</details>
+
+<details>
+  <summary>Helps Refactor</summary>
+  <ul>
+<li>You can use <a href="https://learn.microsoft.com/es-es/dotnet/api/system.array.findall?view=net-8.0">Array.FindAll</a></li>  
+</ul>
+</details>
+
+## 7. Refactor the code
+Now that you have the exercises done, refactor the code with other alternatives within the c# language.
+
+You can find help in the Helps Refacto section, after Helps.
+
 
 ## Source
 
